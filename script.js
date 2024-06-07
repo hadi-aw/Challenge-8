@@ -20,4 +20,20 @@ document.addEventListener('DOMContentLoaded', () =>{
             return;
         }
 
-        
+        // Create registration details elements
+        const registrationItem = document.createElement('div');
+        registrationItem.className = 'registration-item';
+        registrationItem.innerHTML = `
+            <h3>${name}</h3>
+            <p>Email: ${email}</p>
+            <p>Event Date: ${date}</p>
+            <p>Meal Preference: ${mealPreference.join(", ")}</p>
+        `;
+
+        // Append registration details to the display
+        registrationDisplay.appendChild(registrationItem);
+
+        // Reset form fields
+        form.reset();
+    });
+});
